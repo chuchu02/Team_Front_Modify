@@ -7,17 +7,17 @@
 </head>
 
 <main layout:fragment="main">
-    <div class="con flex">
-        <div class="flex">
-            <div th:if="${productList.size() == 0}" class="con h-96 flex justify-center items-center text-lg">
+    <div class="con grid">
+        <div class="grid">
+            <div th:if="${productList.size() == 0}" class="con h-96 grid justify-center items-center text-lg">
                 현재 상품이 존재하지 않습니다.
             </div>
-            <div th:if="${productList.size() != 0}" class="flex flex-wrap">
-                <div th:each="product : ${productList}" class="w-[calc(25%)]">
+            <div th:if="${productList.size() != 0}" class="grid grid-cols-4">
+                <div th:each="product : ${productList}">
                     <div class="h-auto p-5 box-border mt-2.5 ">
                         <a th:href="'/product/detail?id='+${product.id}">
                             <img th:src="'/product_image/'+${product.title}+'/'+${product.mainImage}" alt="옷"
-                                 class="product_img3">
+                                 class="product_img3 rounded-lg">
                             <div class="whitespace-normal overflow-ellipsis text-lg">[[${product.title}]]
                             </div>
                             <div class="mt-1 tracking-tighter price whitespace-normal">
