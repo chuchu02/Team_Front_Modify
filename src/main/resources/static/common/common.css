@@ -79,9 +79,13 @@ align-items: center;
 .product_img {
     width:200px;
     height:200px;
-    }
+}
 
 .product_img2 {
     width:400px;
     height:400px;
-    }
+}
+.product_img3 {
+    width:297.5px;
+    height:297.5px;
+  }
